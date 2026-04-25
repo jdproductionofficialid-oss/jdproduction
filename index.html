@@ -247,12 +247,12 @@ nav{
       <span class="c-arr">→</span>
     </a>
 
-    <a class="card" href="/booking" data-link="Booking Gratis">
+    <a class="card" href="https://jdform.vercel.app/" target="_blank" rel="noopener" data-link="Booking Form">
       <div class="c-icon">🗓️</div>
       <div class="c-text">
-        <span class="c-title">Booking Tanpa Bayar</span>
-        <span class="c-desc">Reservasi · Bayar di tempat</span>
-        <span class="c-badge">Tanpa Pembayaran</span>
+        <span class="c-title">Booking Form</span>
+        <span class="c-desc">Form reservasi studio & rental</span>
+        <span class="c-badge">jdform.vercel.app</span>
       </div>
       <span class="c-arr">→</span>
     </a>
@@ -602,7 +602,7 @@ function renderDash(){
   const maxV=Math.max(1,...vals.map(x=>x.val));
   document.getElementById('bar-chart').innerHTML=vals.map(({label,val})=>'<div class="bar-row"><div class="bar-day">'+label+'</div><div class="bar-track"><div class="bar-fill" data-pct="'+Math.round(val/maxV*100)+'"></div></div><div class="bar-val">'+val+'</div></div>').join('');
   setTimeout(()=>{document.querySelectorAll('.bar-fill').forEach(b=>b.style.width=b.dataset.pct+'%');},50);
-  const links=['Photobooth','AI Photobooth','MagicFrame Photobooth','Booking Bayar','Booking Gratis','WhatsApp','Google Maps','Sosial Media','Layanan Lainnya','Instagram','TikTok','YouTube','Drone','Sewa Rental','Shopee','Fotoyu','Jual Beli FB'];
+  const links=['Photobooth','AI Photobooth','MagicFrame Photobooth','Booking Form','Booking Bayar','WhatsApp','Google Maps','Sosial Media','Layanan Lainnya','Instagram','TikTok','YouTube','Drone','Sewa Rental','Shopee','Fotoyu','Jual Beli FB'];
   document.getElementById('link-chart').innerHTML=links.map(name=>'<div class="link-stat-row"><div class="link-stat-name">'+name+'</div><div class="link-stat-cnt">'+(clicks[name]||0)+'</div></div>').join('');
 }
 function resetData(){if(!confirm('Reset semua data?'))return;Object.values(K).forEach(k=>localStorage.removeItem(k));sessionStorage.removeItem('jdp_ok');renderDash();document.getElementById('live-count').textContent='0 pengunjung hari ini';}
